@@ -1,0 +1,565 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ width: 100%;
+ height: auto;
+    font-size: 15px;
+    background: #21242B;
+    font-family: var(--fontBase);
+}
+img{
+ width: 100%;
+}
+a{
+ text-decoration: none;
+}
+ul,li,ol{
+ list-style: none;
+}
+:root{
+    
+ --fontBase: Arial;
+ 
+}
+@font-face {
+ font-family: MON_EB;
+ src: url("assets/Fonts/Montserrat-ExtraBold.ttf");
+}
+
+@font-face {
+   font-family: MOM_B;
+   src: url("assets/Fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+   font-family: POP_R;
+   src: url("assets/Fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+   font-family: ROB_R;
+   src: url("assets/Fonts/Roboto-Regular.ttf");
+}
+
+section{
+   width: 100%;
+   min-height: 100vh;
+}
+
+.acceuilleFluter{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.3);
+   background-image: radial-gradient(#FF000000,#000000C9);
+   background: transparent;
+}
+
+.lightDark,
+.centeredItem,
+.toolsbar,
+.toolsbar div,
+.acc_left,
+.acc_left div.carrouse{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.toolsbar{
+   position: absolute;
+   top: 20px;
+   left: 0;
+   width: 100%;
+   height: 50px;
+   padding: 0 20px;
+   justify-content: flex-start;
+   color: #fff;
+}
+
+.toolsbar div{
+   width: 50%;
+   justify-content: flex-start;
+   color: inherit;
+}
+
+.toolsbar button{
+   width: 50px;
+   height: 50px;
+   background: none;
+   border: none;
+   border-radius: 5;
+   outline: none;
+   color: inherit;
+}
+
+.toolsbar button svg{
+   width: 25px;
+   height: 25px;
+   color: inherit;
+}
+
+.toolsbar strong{
+   font-size: 20px;
+   font-weight: 500;
+   color: inherit;
+   font-family: MON_EB;
+}
+
+
+/* Box acceuille */
+
+
+.box_acc{
+   width: 400px;
+   height: 100% ;
+}
+
+.acc_left{
+   padding-top: 80px;
+   width: 100%;
+   height: 50%;
+   flex-direction: column;
+   padding-bottom: 0px;
+   justify-content: flex-start;
+}
+
+.acc_left div.limage{
+   width: 100%;
+   height: 300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.acc_left div.limage img{
+   width: 200px;
+}
+
+/* carrouse */
+
+.acc_left div.carrouse{
+   top: 60%;
+   transform: translateY(calc(-50% - 20px));
+   position: absolute;
+   width: 100%;
+   height: 20px;
+   background: transparent;
+}
+
+.acc_left div.carrouse span{
+   width: 5px;
+   height: 5px;
+   background: #AEAEAE;
+   border-radius: 10px;
+   margin: 0 3px;
+}
+
+.acc_left div.carrouse span.fill{
+   background: #4958FF;
+}
+
+.acc_right{
+   position: relative;
+   padding: 20px 20px 40px;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 40%;
+   color: #fff;
+   border-top-left-radius: 30px;
+   border-top-right-radius: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-end;
+   background: #2C2F38;
+}
+
+.lightDark{
+   top: 10px;
+   right: 10px;
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   color: #fff;
+   border-radius: 30px;
+   background: #A6A6A6;
+}
+
+.acc_right h2{
+   font-size: 30px;
+   font-weight: 500;
+   color: inherit;
+   font-family: MOM_B;
+   line-height: 32px;
+   margin: 15px 0 10px 0
+}
+
+.acc_right p{
+   font-size: 12px;
+   font-weight: 350;
+   color: inherit;
+   font-family: POP_R;
+   padding-bottom: 20px;
+}
+
+.acc_right small{
+   font-size: 12px;
+   font-weight: 450;
+   color: inherit;
+   font-family: POP_R;
+}
+
+.cardServiceButton button,
+.acc_right button{
+   width: auto;
+   height: 40px;
+   padding: 0 20px;
+   border-radius: 5px;
+   background: #FFAE14;
+   border: none;
+   outline: none;
+   font-size: 18px;
+   font-weight: 500;
+   color: #383838;
+   font-family: POP_R;
+   margin-top: 10px;
+}
+
+/* cardService */
+
+#service{
+   width: 100%;
+   min-height: 100vh;
+   background: transparent;
+   padding: 0px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+#service > div{
+   width: 100%;
+   height: 100%;
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+   grid-gap: 30px;
+   padding: 50px 20px 20px 20px;   
+   align-items: center;
+   justify-items: center;
+}
+
+.cardServiceButton,
+.cardServiceBoxImg,
+.cardServiceInfo{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.cardService{
+   width: 300px;
+   height: 350px;
+   background: #2C2F38;
+   border-radius: 5px;
+   box-shadow: 
+   2px 2px 0px 2px #1E2026,
+   3px 3px 0px 3px #FFAE14;
+   
+   /*  #7C9DFF;  */
+   color:  #fff;
+}
+
+.cardServiceBoxImg{
+   width: 100%;
+   height: 180px;
+   border-radius: 5px;
+}
+
+.cardServiceBoxImg img{
+   width: 200px;
+}
+
+.cardServiceBoxImg svg{
+   width: 100px;
+   height: 100px;
+   color: #FFAE14;
+}
+
+.cardServiceInfo{
+   width: 100%;
+   height: 100px;
+   border-radius: 5px;
+   padding: 0 20px;
+   color: inherit;
+   flex-direction: column;
+}
+
+.cardServiceInfo p{
+   font-size: 20px;
+   font-weight: 600;
+   font-family: POP_R;
+   color: inherit;
+   text-align: center;
+}
+
+.cardServiceInfo small {
+   font-size: 12px;
+   font-weight: 400;
+   font-family: POP_R;
+   color: inherit;
+   text-align: center;
+
+}
+
+.cardServiceButton{
+   width: 100%;
+   height: 80px;
+   border-radius: 5px;
+   align-items: flex-start;
+}
+
+.cardServiceButton button{
+   width: 140px;
+   height: 40px;
+   border-radius: 5px;
+   background: #FFAE14;
+   color: #fff;
+}
+
+
+
+
+
+
+footer{
+   width: 100%;
+   height: 300px;
+   font-family: POP_R;
+   background: transparent;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   align-items: center;
+
+}
+
+footer .partenary{
+   width: 100%;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   background:  #2A2C31;
+   padding: 0 20px;
+   color: #fff;
+}
+
+footer .partenary ul{
+   width: 50%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+footer .partenary ul li{
+   width: 100%;
+   text-align: left;
+   height: 30px;
+}
+
+footer > p{
+   background: #2A2C31;
+   width: 100%;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   padding-top: 0px;
+}
+
+footer .licence{
+   width: 100%;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #eee;
+   background: #232323;
+}
+
+
+
+section.light .cardService,
+section.light .acc_right{
+   background: #fff;
+   color: #383838
+}
+
+section.light .cardService{
+   box-shadow: 
+   2px 2px 0px 2px #393939,
+   3px 3px 0px 3px #fff;
+}
+
+
+section.light .acc_right button{
+   background: #FFAE14;
+   color: #fff;
+}
+
+section.light .cardService button{
+   background: #FFAE14;
+   color: #fff;
+
+}
+section.light .cardService svg{
+   color: #FFAE14;
+}
+
+
+section.light .toolsbar{
+   color: #383838;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 600px){
+.acceuilleFluter {
+   height: 100vh;
+}
+
+.box_acc{
+   width: 100%;
+   padding-top: 80px;
+   display: flex;
+   justify-content: center;
+   flex-direction: row-reverse;
+   padding: 0px 50px;
+   align-items: center;
+}
+
+.acc_right{
+   position: relative;
+   width: 50%;
+   height: 100%;
+   background: none;
+}
+
+.acc_left{
+   position: relative;
+   width: 40%;
+   height: 100%;
+   margin: 0;
+   padding: 60px;
+}
+
+.acc_left img{
+   width: 300px;
+}
+
+.acc_left div.carrouse{
+   position: relative;
+   background: none;
+   transform: translateY(0px);
+   top: 0;
+}
+
+.acc_right h2{
+   font-size: 30px;
+   line-height: 30px;
+}
+
+#service > div{
+   grid-template-columns: repeat(2,1fr);
+   
+}
+.cardService{
+   width: 300px;
+}
+
+
+footer .partenary ul li{
+   text-align: center;
+}
+
+section.light .acc_right{
+   background: none;
+}
+
+
+}
+
+
+
+@media only screen and (min-width: 850px){
+.acceuilleFluter {
+   height: 100vh;
+}
+
+.box_acc{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   margin-top: 0;
+   justify-content: center;
+   flex-direction: row-reverse;
+   padding: 100px 100px 0 100px;
+   align-items: center;
+}
+
+.acc_right{
+   position: relative;
+   width: 60%;
+   height: 100%;
+   background: none;
+   justify-content: center;
+}
+
+.acc_left{
+   width: 40%;
+   height: 100%;
+   margin: 0;
+   align-items: center;
+   justify-content: center;
+   padding: 0 0 80px 0;
+}
+
+.acc_left div.limage{
+   height: 200px;
+   align-items: center;
+}
+
+.acc_left div img{
+   width: 250px;
+}
+
+.cardService{
+   width: 250px;
+}
+
+#service>div {
+   grid-template-columns: repeat(3, 1fr);
+   padding: 0 100px;
+
+}
+
+}
+
+
+
+
